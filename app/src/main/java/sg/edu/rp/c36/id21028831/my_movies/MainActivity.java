@@ -2,7 +2,9 @@ package sg.edu.rp.c36.id21028831.my_movies;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -73,12 +75,21 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-                DBHelper dbh=new DBHelper(MainActivity.this);
-                long inserted_id=dbh.insertMovie(title,genre,year,rating);
+//                DBHelper dbh=new DBHelper(MainActivity.this);
+//                long inserted_id=dbh.insertMovie(title,genre,year,rating);
+//
+//                if (inserted_id !=1){
+//                    Toast.makeText(MainActivity.this, "Insert Successful", Toast.LENGTH_SHORT).show();
+//                }
+            }
+        });
 
-                if (inserted_id !=1){
-                    Toast.makeText(MainActivity.this, "Insert Successful", Toast.LENGTH_SHORT).show();
-                }
+        btnShow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(MainActivity.this, showMovies.class);
+                startActivity(i);
+                Log.d("Activity started", "Activity successfully started");
             }
         });
     }
