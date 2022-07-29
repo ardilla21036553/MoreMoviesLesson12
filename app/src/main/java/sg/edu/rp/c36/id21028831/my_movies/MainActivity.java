@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     Spinner spinnerRating;
     Button btnInsert;
     Button btnShow;
+    String rating;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,16 +32,11 @@ public class MainActivity extends AppCompatActivity {
         btnInsert=findViewById(R.id.btnInsert);
         btnShow=findViewById(R.id.btnShow);
 
-        btnInsert.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String title=etTitle.getText().toString();
-                String genre=etGenre.getText().toString();
-                int year=Integer.parseInt(etYear.getText().toString());
-                spinnerRating.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                    String rating="";
+
+        spinnerRating.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
                     @Override
-                    public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
                         switch(position){
                             case 0:
                                 rating="G";
@@ -75,14 +71,31 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
+        btnInsert.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String title=etTitle.getText().toString();
+                String genre=etGenre.getText().toString();
+                int year=Integer.parseInt(etYear.getText().toString());
+
+
+                DBHelper dbh = new DBHelper(MainActivity.this);
+                long inserted_id = dbh.insertMovie(title, genre, year, rating);
+
+                if (inserted_id != -1){
+                    Toast.makeText(MainActivity.this, "Insert successful",
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
 //                DBHelper dbh=new DBHelper(MainActivity.this);
 //                long inserted_id=dbh.insertMovie(title,genre,year,rating);
 //
 //                if (inserted_id !=1){
 //                    Toast.makeText(MainActivity.this, "Insert Successful", Toast.LENGTH_SHORT).show();
 //                }
-            }
-        });
+
 
         btnShow.setOnClickListener(new View.OnClickListener() {
             @Override

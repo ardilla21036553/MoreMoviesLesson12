@@ -3,17 +3,26 @@ package sg.edu.rp.c36.id21028831.my_movies;
 import java.io.Serializable;
 
 public class Movies implements Serializable {
+    private int id;
     private String title;
     private String genre;
     private int year;
-    private int rating;
-//help
-    public Movies(String title, String genre, int year, int rating) {
+    private String rating;
 
+    public Movies(int id, String title, String genre, int year, String rating) {
+        this.id = id;
         this.title = title;
         this.genre = genre;
         this.year = year;
         this.rating = rating;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getTitle() {
@@ -40,11 +49,11 @@ public class Movies implements Serializable {
         this.year = year;
     }
 
-    public int getRating() {
+    public String getRating() {
         return rating;
     }
 
-    public void setRating(int rating) {
+    public void setRating(String rating) {
         this.rating = rating;
     }
 

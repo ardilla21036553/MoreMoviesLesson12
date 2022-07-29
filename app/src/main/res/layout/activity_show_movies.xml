@@ -7,6 +7,12 @@
     android:orientation="vertical"
     tools:context=".showMovies">
 
+    <Button
+        android:id="@+id/btnPg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
     <ListView
         android:id="@+id/lv"
         android:layout_width="match_parent"
