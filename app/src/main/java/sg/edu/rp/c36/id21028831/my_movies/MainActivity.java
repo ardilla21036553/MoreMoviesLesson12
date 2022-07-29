@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
     EditText etGenre;
     EditText etYear;
     Spinner spinnerRating;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
