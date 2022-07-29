@@ -10,6 +10,7 @@ import java.util.ArrayList;
 public class showMovies extends AppCompatActivity {
     ArrayList<Movies> al;
     ListView lv;
+    CustomAdapter caMovies;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +20,13 @@ public class showMovies extends AppCompatActivity {
         lv=findViewById(R.id.lv);
 
         al=new ArrayList<Movies>();
+        caMovies= new CustomAdapter(this, R.layout.row, al);
+        lv.setAdapter(caMovies);
+
+        DBHelper dbh=new DBHelper(showMovies.this);
+        al.clear();
+        al.addAll(dbh.getAllMovies());
+        caMovies.notifyDataSetChanged();
 
     }
 }
