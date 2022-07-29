@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         etYear=findViewById(R.id.etYear);
         spinnerRating=findViewById(R.id.spinnerRating);
 
+        int year = Integer.parseInt(etYear.getText().toString());
     }
 
 }
