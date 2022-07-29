@@ -37,19 +37,19 @@ public class CustomAdapter extends ArrayAdapter {
         tvGenre.setText(currentItem.getGenre());
         tvYear.setText(currentItem.getYear()+"");
 
-//        if (currentItem.getRating()=="G"){
-//            ivRating.setImageResource(R.drawable.rating_g);
-//        }else if (currentItem.getRating()=="PG"){
-//            ivRating.setImageResource(R.drawable.rating_pg);
-//        }else if (currentItem.getRating()=="PG13"){
-//            ivRating.setImageResource(R.drawable.rating_pg13);
-//        }else if (currentItem.getRating()=="NC16"){
-//            ivRating.setImageResource(R.drawable.rating_nc16);
-//        }else if (currentItem.getRating()=="M18"){
-//            ivRating.setImageResource(R.drawable.rating_m18);
-//        }else if (currentItem.getRating()=="R21"){
-//            ivRating.setImageResource(R.drawable.rating_r21);
-//        }
+        if (currentItem.getRating()=="G"){
+            ivRating.setImageResource(R.drawable.rating_g);
+        }else if (currentItem.getRating()=="PG"){
+            ivRating.setImageResource(R.drawable.rating_pg);
+        }else if (currentItem.getRating()=="PG13"){
+            ivRating.setImageResource(R.drawable.rating_pg13);
+        }else if (currentItem.getRating()=="NC16"){
+            ivRating.setImageResource(R.drawable.rating_nc16);
+        }else if (currentItem.getRating()=="M18"){
+            ivRating.setImageResource(R.drawable.rating_m18);
+        }else if (currentItem.getRating()=="R21"){
+            ivRating.setImageResource(R.drawable.rating_r21);
+        }
 
         return rowView;
     }
