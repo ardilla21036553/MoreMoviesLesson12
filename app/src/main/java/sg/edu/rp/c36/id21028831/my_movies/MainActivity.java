@@ -21,4 +21,5 @@ public class MainActivity extends AppCompatActivity {
         spinnerRating=findViewById(R.id.spinnerRating);
 
     }
+
 }
