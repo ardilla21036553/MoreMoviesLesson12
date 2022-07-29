@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         etGenre=findViewById(R.id.etGenre);
         etYear=findViewById(R.id.etYear);
         spinnerRating=findViewById(R.id.spinnerRating);
-
+//
         int year = Integer.parseInt(etYear.getText().toString());
     }
 
