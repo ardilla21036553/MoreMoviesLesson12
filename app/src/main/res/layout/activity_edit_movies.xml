@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/dark_blue"
     tools:context=".editMovies">
 
     <LinearLayout
@@ -13,6 +14,44 @@
         android:orientation="vertical">
 
         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/stargazeregular"
+            android:gravity="center_horizontal"
+            android:paddingTop="50dp"
+            android:paddingBottom="10dp"
+            android:text="Movies"
+            android:textColor="@color/white"
+            android:textSize="50sp" />
+
+        <View
+            android:layout_width="370dp"
+            android:layout_height="3dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:color/white" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:fontFamily="@font/stargazestencil"
+            android:gravity="center_horizontal"
+            android:text="Add movies here!"
+            android:textColor="#FFFFFF" />
+
+        <View
+            android:layout_width="370dp"
+            android:layout_height="3dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:color/white" />
+
+        <TextView
+            android:paddingTop="40dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/stargazestencil"
             android:id="@+id/tvID"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -20,6 +59,9 @@
 
         <EditText
             android:id="@+id/etID"
+            android:background="@drawable/text_outline"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -29,12 +71,19 @@
 
         <TextView
             android:id="@+id/tvTitle"
+            android:paddingTop="10dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/stargazestencil"
+            android:layout_marginLeft="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/title" />
 
         <EditText
             android:id="@+id/etTitle"
+            android:background="@drawable/text_outline"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -43,6 +92,10 @@
 
         <TextView
             android:id="@+id/tvGenre"
+            android:paddingTop="10dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/stargazestencil"
+            android:layout_marginLeft="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/genre" />
@@ -51,6 +104,9 @@
             android:id="@+id/etGenre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/text_outline"
             android:ems="10"
             android:hint=""
             android:inputType="textPersonName" />
@@ -59,28 +115,47 @@
             android:id="@+id/tvYear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/stargazestencil"
+            android:layout_marginLeft="20dp"
             android:text="@string/year" />
 
         <EditText
             android:id="@+id/etYear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/text_outline"
             android:ems="10"
             android:hint=""
             android:inputType="textPersonName" />
 
         <TextView
             android:id="@+id/tvRating"
+            android:paddingTop="10dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/stargazestencil"
+            android:layout_marginLeft="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/rating" />
 
         <Spinner
             android:id="@+id/spinnerRating"
+            android:background="@drawable/text_outline"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:entries="@array/spinnerRating" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -88,6 +163,10 @@
         android:orientation="horizontal">
 
         <Button
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/orange"
+            android:fontFamily="@font/stargazeregular"
             android:id="@+id/btnUpdate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -95,6 +174,10 @@
             android:text="UPDATE" />
 
         <Button
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/orange"
+            android:fontFamily="@font/stargazeregular"
             android:id="@+id/btnDelete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -104,6 +187,10 @@
     </LinearLayout>
 
     <Button
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="@color/orange"
+        android:fontFamily="@font/stargazeregular"
         android:id="@+id/btnCancel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -3,37 +3,47 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/dark_blue"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <ImageView
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:id="@+id/imageViewRating"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:contentDescription="@null"
+        app:srcCompat="@drawable/rating_g" />
 
-        <TextView
-            android:id="@+id/textViewTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Title"
-            android:textAppearance="@android:style/TextAppearance.Large" />
-
-        <ImageView
-            android:id="@+id/imageViewRating"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@null"
-            app:srcCompat="@drawable/rating_g" />
-    </LinearLayout>
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_marginLeft="20dp"
+        android:paddingTop="10dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/stargazestencil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textAppearance="@android:style/TextAppearance.Large" />
 
     <TextView
         android:id="@+id/textViewGenre"
-        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:paddingTop="10dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/stargazestencil"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Genre" />
 
     <TextView
         android:id="@+id/textViewYear"
-        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:paddingTop="10dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/stargazestencil"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
         android:text="Year" />
 </LinearLayout>

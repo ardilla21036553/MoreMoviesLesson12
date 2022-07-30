@@ -5,48 +5,105 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/dark_blue"
     tools:context=".MainActivity" >
 
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/stargazeregular"
+        android:gravity="center_horizontal"
+        android:paddingTop="50dp"
+        android:paddingBottom="10dp"
+        android:text="Movies"
+        android:textColor="@color/white"
+        android:textSize="50sp" />
+
+    <View
+        android:layout_width="370dp"
+        android:layout_height="3dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/white" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:fontFamily="@font/stargazestencil"
+        android:gravity="center_horizontal"
+        android:text="Add movies here!"
+        android:textColor="#FFFFFF" />
+
+    <View
+        android:layout_width="370dp"
+        android:layout_height="3dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/white" />
+
+    <TextView
+        android:paddingTop="40dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/stargazestencil"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Movie Title" />
 
     <EditText
         android:id="@+id/etTitle"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Enter movie title here"
+        android:background="@drawable/text_outline"
         android:inputType="textPersonName" />
 
     <TextView
+        android:paddingTop="10dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/stargazestencil"
+        android:layout_marginLeft="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Genre" />
 
     <EditText
         android:id="@+id/etGenre"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Enter genre here"
+        android:background="@drawable/text_outline"
         android:inputType="textPersonName" />
 
     <TextView
+        android:paddingTop="10dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/stargazestencil"
+        android:layout_marginLeft="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Year" />
 
     <EditText
         android:id="@+id/etYear"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Enter year of release here"
+        android:background="@drawable/text_outline"
         android:inputType="textPersonName" />
 
     <TextView
+        android:paddingTop="10dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/stargazestencil"
+        android:layout_marginLeft="20dp"
         android:id="@+id/textViewRating"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -54,27 +111,42 @@
 
     <Spinner
         android:id="@+id/spinnerRating"
+        android:background="@drawable/text_outline"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:entries="@array/spinnerRating" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp">
 
         <Button
             android:id="@+id/btnInsert"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_weight="1"
+            android:backgroundTint="@color/orange"
+            android:fontFamily="@font/stargazeregular"
             android:text="Insert" />
 
         <Button
             android:id="@+id/btnShow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_weight="1"
+            android:backgroundTint="@color/orange"
+            android:fontFamily="@font/stargazeregular"
             android:text="Show List" />
     </LinearLayout>
+
 </LinearLayout>

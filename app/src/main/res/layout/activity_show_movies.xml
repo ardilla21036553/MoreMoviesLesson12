@@ -4,11 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/dark_blue"
     android:orientation="vertical"
     tools:context=".showMovies">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/stargazeregular"
+        android:gravity="center_horizontal"
+        android:paddingTop="50dp"
+        android:paddingBottom="10dp"
+        android:text="Movies"
+        android:textColor="@color/white"
+        android:textSize="50sp" />
+
+    <View
+        android:layout_width="370dp"
+        android:layout_height="3dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/white" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:fontFamily="@font/stargazestencil"
+        android:gravity="center_horizontal"
+        android:text="View movies here!"
+        android:textColor="#FFFFFF" />
+
+    <View
+        android:layout_width="370dp"
+        android:layout_height="3dp"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="30dp"
+        android:background="@android:color/white" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <Button
         android:id="@+id/btnPg"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="@color/orange"
+        android:fontFamily="@font/stargazeregular"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/pg" />
