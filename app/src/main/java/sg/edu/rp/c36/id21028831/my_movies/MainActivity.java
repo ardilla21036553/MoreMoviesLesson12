@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnInsert;
     Button btnShow;
     String rating;
-
+//
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
