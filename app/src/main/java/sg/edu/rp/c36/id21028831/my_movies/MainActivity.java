@@ -1,7 +1,9 @@
 package sg.edu.rp.c36.id21028831.my_movies;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnInsert;
     Button btnShow;
     String rating;
-//
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,12 +91,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//                DBHelper dbh=new DBHelper(MainActivity.this);
-//                long inserted_id=dbh.insertMovie(title,genre,year,rating);
-//
-//                if (inserted_id !=1){
-//                    Toast.makeText(MainActivity.this, "Insert Successful", Toast.LENGTH_SHORT).show();
-//                }
 
 
         btnShow.setOnClickListener(new View.OnClickListener() {
